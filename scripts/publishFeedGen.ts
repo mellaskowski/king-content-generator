@@ -7,6 +7,7 @@ import { ids } from '../src/lexicon/lexicons'
 const run = async () => {
   dotenv.config()
 
+  console.log('Welcome to the Feed Generator setup!', process.env.FEEDGEN_HOSTNAME);
   if (!process.env.FEEDGEN_SERVICE_DID && !process.env.FEEDGEN_HOSTNAME) {
     throw new Error('Please provide a hostname in the .env file')
   }
